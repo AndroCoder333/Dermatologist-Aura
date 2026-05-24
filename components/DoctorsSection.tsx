@@ -161,7 +161,7 @@ export default function DoctorsSection() {
                   </a>
                   
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/shabeeh.haider.71/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-white border border-[#B3D6E7]/30 text-gray-500 hover:text-[#007FCD] hover:border-[#007FCD]/40 hover:bg-[#007FCD]/5 flex items-center justify-center transition-all duration-300 shadow-sm hover:scale-105 hover:shadow-md shrink-0"
