@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden rounded-t-[32px] bg-[#0B1220] text-gray-300 pt-20 pb-8 mt-20">
+    <footer className="relative overflow-hidden  bg-[#0B1220] text-gray-300 pt-20 pb-8 mt-20">
 
       {/* Background Glow — analogous blue + split-complementary pink */}
       <div className="absolute top-0 right-0 h-80 w-80 bg-[#007FCD]/8 blur-[120px] rounded-full pointer-events-none" />

@@ -73,7 +73,7 @@ export default function DoctorsSection() {
               {/* Specs List with soft hover state */}
               <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10">
                 {/* Education */}
-                <motion.div 
+                <dev 
                   whileHover={{ x: 6 }}
                   className="flex gap-3 sm:gap-5 items-start p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white/80 border border-[#B3D6E7]/25 shadow-sm transition-all hover:bg-white hover:border-[#007FCD]/30 hover:shadow-md"
                 >
@@ -86,10 +86,10 @@ export default function DoctorsSection() {
                       BUMS (Bachelor of Unani Medicine and Surgery)
                     </p>
                   </div>
-                </motion.div>
+                </dev>
 
                 {/* Specialization */}
-                <motion.div 
+                <dev 
                   whileHover={{ x: 6 }}
                   className="flex gap-3 sm:gap-5 items-start p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white/80 border border-[#B3D6E7]/25 shadow-sm transition-all hover:bg-white hover:border-[#007FCD]/30 hover:shadow-md"
                 >
@@ -102,10 +102,10 @@ export default function DoctorsSection() {
                       General Physician, Skin & Hair Treatment, Cosmetology
                     </p>
                   </div>
-                </motion.div>
+                </dev>
 
                 {/* Expertise */}
-                <motion.div 
+                <dev 
                   whileHover={{ x: 6 }}
                   className="flex gap-3 sm:gap-5 items-start p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white/80 border border-[#B3D6E7]/25 shadow-sm transition-all hover:bg-white hover:border-[#007FCD]/30 hover:shadow-md"
                 >
@@ -118,7 +118,7 @@ export default function DoctorsSection() {
                       Advanced skin treatments, hair restoration, and holistic wellness therapies
                     </p>
                   </div>
-                </motion.div>
+                </dev>
               </div>
 
               {/* Biography paragraph */}

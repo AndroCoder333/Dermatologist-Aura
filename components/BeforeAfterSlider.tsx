@@ -41,7 +41,7 @@ export default function BeforeAfterSlider() {
     <section id="before-after" className="py-24 bg-white relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.div
+          <dev
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -54,11 +54,11 @@ export default function BeforeAfterSlider() {
             <p className="text-text-muted text-lg">
               See the transformative results our advanced treatments provide. Slide to compare the visible differences.
             </p>
-          </motion.div>
+          </dev>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <motion.div 
+          <dev 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -111,7 +111,7 @@ export default function BeforeAfterSlider() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </dev>
           
           <div className="text-center mt-6 text-sm text-text-muted">
             <span className="inline-block md:hidden">Swipe left and right</span>

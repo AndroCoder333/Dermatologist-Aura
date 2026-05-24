@@ -74,7 +74,7 @@ export default function WhyChooseUs() {
           
           {/* Left Column: Heading (compact layout) */}
           <div className="lg:col-span-4 text-center lg:text-left">
-            <motion.div
+            <dev
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -90,12 +90,12 @@ export default function WhyChooseUs() {
               <p className="text-white text-xs max-w-md mx-auto lg:mx-0">
                 Medical expertise and advanced technology combined for outstanding clinical care.
               </p>
-            </motion.div>
+            </dev>
           </div>
 
           {/* Right Column: Ultra-Compact Counters Grid */}
           <div className="lg:col-span-8">
-            <motion.div 
+            <dev 
               initial={{ opacity: 0, scale: 0.98 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -106,7 +106,7 @@ export default function WhyChooseUs() {
               <CounterItem label="Happy Patients" end={50} suffix="k+" icon={<Users className="w-5 h-5" />} />
               <CounterItem label="Satisfaction" end={98} suffix="%" icon={<ThumbsUp className="w-5 h-5" />} />
               <CounterItem label="Advanced Tech" end={100} suffix="%" icon={<Activity className="w-5 h-5" />} />
-            </motion.div>
+            </dev>
           </div>
 
         </div>

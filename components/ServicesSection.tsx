@@ -37,7 +37,7 @@ export default function ServicesSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <motion.div
+          <dev
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -50,10 +50,10 @@ export default function ServicesSection() {
             <p className="text-text-muted text-base sm:text-lg">
               Discover our comprehensive range of advanced dermatological treatments designed to enhance your natural beauty and boost your confidence.
             </p>
-          </motion.div>
+          </dev>
         </div>
 
-        <motion.div 
+        <dev 
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -61,7 +61,7 @@ export default function ServicesSection() {
           className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"
         >
           {services.map((service) => (
-            <motion.div
+            <dev
               key={service.id}
               variants={itemVariants}
               whileHover={{ y: -10 }}
@@ -93,9 +93,9 @@ export default function ServicesSection() {
                   Learn More <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
-            </motion.div>
+            </dev>
           ))}
-        </motion.div>
+        </dev>
 
       </div>
     </section>

@@ -61,7 +61,7 @@ export default function ContactUs() {
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#007FCD]/5 rounded-full blur-[120px] pointer-events-none" />
           
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <motion.div
+            <dev
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -76,7 +76,7 @@ export default function ContactUs() {
               <p className="text-[#506075] text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
                 Have questions about our treatments, pricing, or procedures? Send us a message or schedule a personal session. Our expert clinic representatives are here to assist you.
               </p>
-            </motion.div>
+            </dev>
           </div>
         </section>
 
@@ -87,7 +87,7 @@ export default function ContactUs() {
               
               {/* Left Side: Contact Cards */}
               <div className="lg:col-span-5 space-y-6">
-                <motion.div
+                <dev
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -150,10 +150,10 @@ export default function ContactUs() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </dev>
 
                 {/* Direct WhatsApp Callout */}
-                <motion.div
+                <dev
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -171,12 +171,12 @@ export default function ContactUs() {
                     Chat Now
                     <ArrowRight className="w-4 h-4" />
                   </button>
-                </motion.div>
+                </dev>
               </div>
 
               {/* Right Side: Contact / Inquiry Form */}
               <div className="lg:col-span-7">
-                <motion.div
+                <dev
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -184,7 +184,7 @@ export default function ContactUs() {
                   className="bg-white border border-[#B3D6E7]/30 rounded-3xl p-6 sm:p-10 shadow-sm relative overflow-hidden"
                 >
                   {submitSuccess ? (
-                    <motion.div
+                    <dev
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       className="text-center py-12 px-4 space-y-6"
@@ -213,7 +213,7 @@ export default function ContactUs() {
                           <ArrowRight className="w-4 h-4" />
                         </button>
                       </div>
-                    </motion.div>
+                    </dev>
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="flex items-center gap-2 mb-2">
@@ -323,7 +323,7 @@ export default function ContactUs() {
                       </div>
                     </form>
                   )}
-                </motion.div>
+                </dev>
               </div>
 
             </div>

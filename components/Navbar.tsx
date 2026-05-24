@@ -79,7 +79,7 @@ export default function Navbar() {
 
       {/* Mobile Nav */}
       {isMobileMenuOpen && (
-        <motion.div
+        <dev
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
@@ -103,7 +103,7 @@ export default function Navbar() {
             <PhoneCall className="w-4 h-4" />
             Book Consultation
           </a>
-        </motion.div>
+        </dev>
       )}
     </motion.nav>
   );

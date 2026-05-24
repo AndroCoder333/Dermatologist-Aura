@@ -59,7 +59,7 @@ export default function AppointmentForm() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           {/* Form Info */}
-          <motion.div
+          <dev
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -92,10 +92,10 @@ export default function AppointmentForm() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </dev>
 
           {/* The Form */}
-          <motion.div
+          <dev
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -126,7 +126,7 @@ export default function AppointmentForm() {
                 </label>
                 
                 {isDropdownOpen && (
-                  <motion.div 
+                  <dev 
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl premium-shadow border border-gray-100 overflow-hidden z-50"
@@ -150,7 +150,7 @@ export default function AppointmentForm() {
                         </li>
                       ))}
                     </ul>
-                  </motion.div>
+                  </dev>
                 )}
               </div>
 
@@ -173,7 +173,7 @@ export default function AppointmentForm() {
                 )}
               </button>
             </form>
-          </motion.div>
+          </dev>
 
         </div>
       </div>

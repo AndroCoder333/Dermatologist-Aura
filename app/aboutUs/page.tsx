@@ -43,7 +43,7 @@ export default function AboutUs() {
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#007FCD]/5 rounded-full blur-[120px] pointer-events-none" />
           
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <motion.div
+            <dev
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -58,7 +58,7 @@ export default function AboutUs() {
               <p className="text-[#506075] text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
                 Medical expertise and advanced technology combined for outstanding clinical care. Discover how we are redefining aesthetic dermatology and clinical hair restoration.
               </p>
-            </motion.div>
+            </dev>
           </div>
         </section>
 
@@ -68,7 +68,7 @@ export default function AboutUs() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               
               {/* Left Column: Story details */}
-              <motion.div
+              <dev
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -92,10 +92,10 @@ export default function AboutUs() {
                     "Our goal is not just temporary aesthetic improvements, but deep-seated, cellular rejuvenation that restores your confidence."
                   </p>
                 </div>
-              </motion.div>
+              </dev>
 
               {/* Right Column: Dynamic Side Stats and Image card */}
-              <motion.div
+              <dev
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -121,7 +121,7 @@ export default function AboutUs() {
                     <p className="text-xs sm:text-sm text-[#506075] mt-1 font-medium">Bespoke Journeys Completed</p>
                   </div>
                 </div>
-              </motion.div>
+              </dev>
 
             </div>
           </div>
@@ -142,7 +142,7 @@ export default function AboutUs() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {coreValues.map((value, index) => (
-                <motion.div
+                <dev
                   key={value.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -156,7 +156,7 @@ export default function AboutUs() {
                   </div>
                   <h3 className="text-xl font-bold text-[#0F1E36] mb-3">{value.title}</h3>
                   <p className="text-[#506075] text-sm sm:text-base leading-relaxed">{value.description}</p>
-                </motion.div>
+                </dev>
               ))}
             </div>
           </div>
@@ -168,7 +168,7 @@ export default function AboutUs() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {milestones.map((milestone, index) => (
-                <motion.div
+                <dev
                   key={milestone.label}
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -178,7 +178,7 @@ export default function AboutUs() {
                 >
                   <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#007FCD]">{milestone.year}</h3>
                   <p className="text-gray-400 text-xs sm:text-sm font-medium uppercase tracking-wider">{milestone.label}</p>
-                </motion.div>
+                </dev>
               ))}
             </div>
           </div>
@@ -190,7 +190,7 @@ export default function AboutUs() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               
               {/* Doctor Image Panel */}
-              <motion.div
+              <dev
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -208,10 +208,10 @@ export default function AboutUs() {
                     <p className="text-primary-light text-sm mt-1">Lead Medical Practitioner & Cosmetologist</p>
                   </div>
                 </div>
-              </motion.div>
+              </dev>
 
               {/* Doctor Details */}
-              <motion.div
+              <dev
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -249,7 +249,7 @@ export default function AboutUs() {
                     Schedule A Session
                   </a>
                 </div>
-              </motion.div>
+              </dev>
 
             </div>
           </div>
