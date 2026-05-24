@@ -32,7 +32,7 @@ export default function HeroSection() {
               <span>Premium Skincare Clinic</span>
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground leading-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground leading-tight mb-6">
               Advanced <br />
               <span className="text-gradient">Dermatologist-Led</span> <br />
               Hair & Skin Care
@@ -47,7 +47,7 @@ export default function HeroSection() {
                 href="#services"
                 className="group p-[1.5px] rounded-2xl bg-gradient-to-r from-primary to-secondary transition-all transform hover:scale-105 premium-shadow flex items-center justify-center"
               >
-                <div className="w-full h-full bg-white/90 text-primary px-8 py-3.5 rounded-[14px] flex items-center justify-center gap-2 text-lg font-medium transition-all duration-300 backdrop-blur-sm">
+                <div className="w-full h-full bg-white/90 text-primary px-6 sm:px-8 py-3 sm:py-3.5 rounded-[14px] flex items-center justify-center gap-2 text-base sm:text-lg font-medium transition-all duration-300 backdrop-blur-sm">
                   Explore Treatments
                   <Compass className="w-5 h-5 transition-transform duration-500 group-hover:rotate-90" />
                 </div>
@@ -67,7 +67,7 @@ export default function HeroSection() {
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                     {badge.icon}
                   </div>
-                  <span className="text-sm font-medium text-foreground">{badge.text}</span>
+                  <span className="text-xs sm:text-sm font-medium text-foreground">{badge.text}</span>
                 </motion.div>
               ))}
             </div>
@@ -84,26 +84,26 @@ export default function HeroSection() {
             <motion.div
               animate={{ y: [0, -20, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-10 right-10 glass p-4 rounded-2xl premium-shadow z-20"
+              className="absolute top-4 right-4 sm:top-10 sm:right-10 glass p-3 sm:p-4 rounded-xl sm:rounded-2xl premium-shadow z-20"
             >
               <div className="flex items-center gap-2">
-                <Star className="w-5 h-5 text-accent fill-current" />
-                <div className="text-sm font-bold">4.9/5 Rating</div>
+                <Star className="w-4 h-4 sm:w-5 sm:h-5 text-accent fill-current" />
+                <div className="text-xs sm:text-sm font-bold">4.9/5 Rating</div>
               </div>
             </motion.div>
 
             <motion.div
               animate={{ y: [0, 20, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute bottom-20 left-0 glass p-4 rounded-2xl premium-shadow z-20"
+              className="absolute bottom-6 left-4 sm:bottom-20 sm:left-0 glass p-3 sm:p-4 rounded-xl sm:rounded-2xl premium-shadow z-20"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white">
-                  <ShieldCheck className="w-5 h-5" />
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-secondary rounded-full flex items-center justify-center text-white shrink-0">
+                  <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <div className="text-sm font-bold">100% Safe</div>
-                  <div className="text-xs text-text-muted">Procedures</div>
+                  <div className="text-xs sm:text-sm font-bold">100% Safe</div>
+                  <div className="text-[10px] sm:text-xs text-text-muted">Procedures</div>
                 </div>
               </div>
             </motion.div>

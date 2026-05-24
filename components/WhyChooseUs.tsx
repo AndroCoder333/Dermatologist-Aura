@@ -51,54 +51,65 @@ function CounterItem({ label, end, suffix, icon }: { label: string, end: number,
   const { count, ref } = useCounter(end, 2000);
 
   return (
-    <div ref={ref} className="flex flex-col items-center p-6 text-center">
-      <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center text-white mb-4 shadow-lg backdrop-blur-sm">
+    <div ref={ref} className="flex flex-col items-center p-2 sm:p-3 text-center">
+      <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center text-white mb-2 shadow-lg backdrop-blur-sm shrink-0">
         {icon}
       </div>
-      <div className="text-4xl lg:text-5xl font-heading font-bold text-white mb-2">
+      <div className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-white mb-0.5">
         {count}{suffix}
       </div>
-      <div className="text-white/80 font-medium text-lg uppercase tracking-wider">{label}</div>
+      <div className="text-white/70 font-medium text-[10px] sm:text-xs uppercase tracking-wider line-clamp-1">{label}</div>
     </div>
   );
 }
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative py-24 bg-dark-gradient overflow-hidden">
+    <section className="relative py-8 md:py-10 bg-dark-gradient overflow-hidden">
       {/* Background Decor */}
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <span className="text-primary font-semibold tracking-wider uppercase text-sm mb-2 block">Why Choose Dermatologist Aura</span>
-            <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">
-              Excellence in <span className="text-primary">Dermatology</span>
-            </h2>
-            <p className="text-gray-300 text-lg">
-              We combine medical expertise with cutting-edge technology to deliver results that exceed expectations.
-            </p>
-          </motion.div>
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center max-w-6xl mx-auto">
+          
+          {/* Left Column: Heading (compact layout) */}
+          <div className="lg:col-span-4 text-center lg:text-left">
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="text-primary font-semibold tracking-wider uppercase text-xs mb-1 block">
+                Why Us
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-heading font-bold text-white mb-1.5 leading-tight">
+                Excellence in <br className="hidden lg:block" />
+                <span className="text-primary">Dermatology</span>
+              </h2>
+              <p className="text-white text-xs max-w-md mx-auto lg:mx-0">
+                Medical expertise and advanced technology combined for outstanding clinical care.
+              </p>
+            </motion.div>
+          </div>
 
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 glass-dark rounded-3xl p-8 lg:p-12"
-        >
-          <CounterItem label="Years Experience" end={15} suffix="+" icon={<Award className="w-8 h-8" />} />
-          <CounterItem label="Happy Patients" end={50} suffix="k+" icon={<Users className="w-8 h-8" />} />
-          <CounterItem label="Satisfaction" end={98} suffix="%" icon={<ThumbsUp className="w-8 h-8" />} />
-          <CounterItem label="Advanced Tech" end={100} suffix="%" icon={<Activity className="w-8 h-8" />} />
-        </motion.div>
+          {/* Right Column: Ultra-Compact Counters Grid */}
+          <div className="lg:col-span-8">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.98 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 glass-dark rounded-2xl p-3 sm:p-4 md:p-6"
+            >
+              <CounterItem label="Years Exp" end={15} suffix="+" icon={<Award className="w-5 h-5" />} />
+              <CounterItem label="Happy Patients" end={50} suffix="k+" icon={<Users className="w-5 h-5" />} />
+              <CounterItem label="Satisfaction" end={98} suffix="%" icon={<ThumbsUp className="w-5 h-5" />} />
+              <CounterItem label="Advanced Tech" end={100} suffix="%" icon={<Activity className="w-5 h-5" />} />
+            </motion.div>
+          </div>
+
+        </div>
       </div>
     </section>
   );
