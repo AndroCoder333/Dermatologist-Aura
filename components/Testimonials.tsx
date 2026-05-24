@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, Quote, Play } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 import { useState } from "react";
 
 export default function Testimonials() {
@@ -47,32 +47,25 @@ export default function Testimonials() {
               Hear From Our <span className="text-gradient">Clients</span>
             </h2>
             <p className="text-text-muted text-lg">
-              Don't just take our word for it. Read and watch how we've helped thousands of patients achieve their goals.
+              Don't just take our word for it. Read how we've helped thousands of patients achieve their goals.
             </p>
           </motion.div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Video Testimonial Placeholder */}
+          {/* Treatment Result Showcase */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative w-full aspect-video rounded-3xl overflow-hidden premium-shadow group cursor-pointer"
+            className="relative w-full aspect-video rounded-3xl overflow-hidden premium-shadow group"
           >
             <img 
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1600" 
-              alt="Video Testimonial" 
+              src="/images/hair-fall-result.png" 
+              alt="Hair Fall Treatment Result" 
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-              <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center group-hover:scale-110 transition-transform">
-                <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center">
-                  <Play className="w-6 h-6 text-white ml-1" />
-                </div>
-              </div>
-            </div>
           </motion.div>
 
           {/* Text Testimonials Slider (CSS based auto-scroll) */}

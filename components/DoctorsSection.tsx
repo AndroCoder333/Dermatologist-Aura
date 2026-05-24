@@ -14,13 +14,7 @@ export default function DoctorsSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col items-center"
-          >
+          <div className="flex flex-col items-center">
             {/* Soft Ice-Blue Subheading Tag (matches Back to School badge style) */}
             <div className="inline-flex px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 sm:mb-6 bg-[#E1F0F7] border border-[#B3D6E7]/30 text-[#006699] shadow-sm">
               Meet Your Expert
@@ -30,7 +24,7 @@ export default function DoctorsSection() {
               Know Your <span className="text-[#007FCD]">Doctor</span>
             </h2>
             <div className="w-24 sm:w-32 h-[3px] bg-gradient-to-r from-transparent via-[#007FCD] to-transparent mx-auto mt-4 sm:mt-6 rounded-full shadow-[0_0_8px_rgba(0,127,205,0.3)]" />
-          </motion.div>
+          </div>
         </div>
 
         {/* Doctor Details Grid */}
@@ -38,48 +32,37 @@ export default function DoctorsSection() {
           
           {/* Left Column: Image with floating soft glowing shapes */}
           <div className="lg:col-span-5 flex justify-center relative px-4 sm:px-0">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative w-full max-w-[320px] sm:max-w-md"
-            >
-              {/* Soft, pulsing blue gradient aura behind photo */}
-              <div className="absolute -top-12 -left-12 w-64 h-64 rounded-full bg-gradient-to-br from-[#007FCD]/10 to-[#B3D6E7]/10 blur-3xl -z-10 animate-pulse" />
-              
-              {/* Bottom-right soft glass outline card */}
-              <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-24 h-24 sm:w-36 sm:h-36 rounded-2xl sm:rounded-[2.5rem] border border-[#B3D6E7]/30 bg-white/60 shadow-lg backdrop-blur-md -z-10" />
-              
-              {/* Top-left soft solid outline accent shape */}
-              <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 w-16 h-16 sm:w-24 sm:h-24 bg-[#E1F0F7] border border-[#B3D6E7]/30 rounded-xl sm:rounded-2xl -z-10 shadow-sm" />
+              <div className="relative w-full max-w-[320px] sm:max-w-md">
+                {/* Soft, pulsing blue gradient aura behind photo */}
+                <div className="absolute -top-12 -left-12 w-64 h-64 rounded-full bg-gradient-to-br from-[#007FCD]/10 to-[#B3D6E7]/10 blur-3xl -z-10 animate-pulse" />
+                
+                {/* Bottom-right soft glass outline card */}
+                <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-24 h-24 sm:w-36 sm:h-36 rounded-2xl sm:rounded-[2.5rem] border border-[#B3D6E7]/30 bg-white/60 shadow-lg backdrop-blur-md -z-10" />
+                
+                {/* Top-left soft solid outline accent shape */}
+                <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 w-16 h-16 sm:w-24 sm:h-24 bg-[#E1F0F7] border border-[#B3D6E7]/30 rounded-xl sm:rounded-2xl -z-10 shadow-sm" />
 
-              {/* Main Doctor Image Frame with soft glowing border */}
-              <div className="p-[2px] sm:p-[2.5px] bg-gradient-to-tr from-[#007FCD]/20 via-[#B3D6E7]/30 to-[#EBF5FA]/20 rounded-[1.8rem] sm:rounded-[2.2rem] shadow-[0_10px_45px_rgba(0,127,205,0.06)] border border-white/80">
-                <div className="relative aspect-[4/5] rounded-[1.7rem] sm:rounded-[2.1rem] overflow-hidden bg-gray-50">
-                  <img 
-                    src="/images/doctor-expert-image.png" 
-                    alt="Dr. Shabeeh Haidar" 
-                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" 
-                    onError={(e) => {
-                      // Falls back gracefully to a high-quality male doctor portrait
-                      e.currentTarget.src = "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop";
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-transparent pointer-events-none" />
+                {/* Main Doctor Image Frame with soft glowing border */}
+                <div className="p-[2px] sm:p-[2.5px] bg-gradient-to-tr from-[#007FCD]/20 via-[#B3D6E7]/30 to-[#EBF5FA]/20 rounded-[1.8rem] sm:rounded-[2.2rem] shadow-[0_10px_45px_rgba(0,127,205,0.06)] border border-white/80">
+                  <div className="relative aspect-[4/5] rounded-[1.7rem] sm:rounded-[2.1rem] overflow-hidden bg-gray-50">
+                    <img 
+                      src="/images/doctor-expert-image.png" 
+                      alt="Dr. Shabeeh Haidar" 
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" 
+                      onError={(e) => {
+                        // Falls back gracefully to a high-quality male doctor portrait
+                        e.currentTarget.src = "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=800&auto=format&fit=crop";
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-transparent pointer-events-none" />
+                  </div>
                 </div>
               </div>
-            </motion.div>
           </div>
 
           {/* Right Column: Info details */}
           <div className="lg:col-span-7">
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
+            <div>
               <h3 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-3 tracking-tight text-[#0F1E36]">
                 Dr. Shabeeh Haidar
               </h3>
@@ -157,7 +140,7 @@ export default function DoctorsSection() {
                 {/* Social icons */}
                 <div className="flex gap-3 sm:gap-4 w-full sm:w-auto justify-center sm:justify-start mt-2 sm:mt-0">
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/dermatologist_aura"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-white border border-[#B3D6E7]/30 text-gray-500 hover:text-[#007FCD] hover:border-[#007FCD]/40 hover:bg-[#007FCD]/5 flex items-center justify-center transition-all duration-300 shadow-sm hover:scale-105 hover:shadow-md shrink-0"
@@ -197,7 +180,7 @@ export default function DoctorsSection() {
                   </a>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
         </div>

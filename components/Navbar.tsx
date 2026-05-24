@@ -18,11 +18,11 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "Before & After", href: "#before-after" },
-    { name: "Our Doctors", href: "#doctors" },
-    { name: "Reviews", href: "#testimonials" },
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/#services" },
+    { name: "Before & After", href: "/#before-after" },
+    { name: "Our Doctors", href: "/#doctors" },
+    { name: "Reviews", href: "/#testimonials" },
   ];
 
   return (
@@ -38,9 +38,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-heading font-bold text-xl">
-              D
-            </div>
+          
             <span className="font-heading font-bold text-xl tracking-tight text-foreground">
               Dermatologist <span className="text-primary">Aura</span>
             </span>
@@ -61,7 +59,7 @@ export default function Navbar() {
               ))}
             </ul>
             <a
-              href="#appointment"
+              href="/#appointment"
               className="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-full text-sm font-medium transition-colors flex items-center gap-2 shadow-lg shadow-primary/30"
             >
               <PhoneCall className="w-4 h-4" />
@@ -98,7 +96,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="#appointment"
+            href="/#appointment"
             onClick={() => setIsMobileMenuOpen(false)}
             className="bg-primary text-white px-5 py-3 rounded-full text-center font-medium mt-2 flex items-center justify-center gap-2"
           >
