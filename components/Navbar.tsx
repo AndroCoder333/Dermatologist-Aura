@@ -79,10 +79,7 @@ export default function Navbar() {
 
       {/* Mobile Nav */}
       {isMobileMenuOpen && (
-        <dev
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
-          exit={{ opacity: 0, height: 0 }}
+        <div
           className="md:hidden glass-dark mt-3 py-4 px-4 flex flex-col gap-4 absolute w-full"
         >
           {navLinks.map((link) => (
@@ -103,7 +100,7 @@ export default function Navbar() {
             <PhoneCall className="w-4 h-4" />
             Book Consultation
           </a>
-        </dev>
+        </div>
       )}
     </motion.nav>
   );

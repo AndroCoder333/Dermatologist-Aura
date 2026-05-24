@@ -73,9 +73,8 @@ export default function DoctorsSection() {
               {/* Specs List with soft hover state */}
               <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10">
                 {/* Education */}
-                <dev 
-                  whileHover={{ x: 6 }}
-                  className="flex gap-3 sm:gap-5 items-start p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white/80 border border-[#B3D6E7]/25 shadow-sm transition-all hover:bg-white hover:border-[#007FCD]/30 hover:shadow-md"
+                <div
+                  className="flex gap-3 sm:gap-5 items-start p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white/80 border border-[#B3D6E7]/25 shadow-sm transition-all hover:bg-white hover:border-[#007FCD]/30 hover:shadow-md hover:translate-x-1.5"
                 >
                   <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-br from-[#007FCD]/10 to-[#007FCD]/5 flex items-center justify-center shrink-0 border border-[#007FCD]/20">
                     <GraduationCap className="w-6 h-6 sm:w-7 sm:h-7 text-[#007FCD]" />
@@ -86,12 +85,11 @@ export default function DoctorsSection() {
                       BUMS (Bachelor of Unani Medicine and Surgery)
                     </p>
                   </div>
-                </dev>
+                </div>
 
                 {/* Specialization */}
-                <dev 
-                  whileHover={{ x: 6 }}
-                  className="flex gap-3 sm:gap-5 items-start p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white/80 border border-[#B3D6E7]/25 shadow-sm transition-all hover:bg-white hover:border-[#007FCD]/30 hover:shadow-md"
+                <div
+                  className="flex gap-3 sm:gap-5 items-start p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white/80 border border-[#B3D6E7]/25 shadow-sm transition-all hover:bg-white hover:border-[#007FCD]/30 hover:shadow-md hover:translate-x-1.5"
                 >
                   <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-br from-[#007FCD]/10 to-[#007FCD]/5 flex items-center justify-center shrink-0 border border-[#007FCD]/20">
                     <Stethoscope className="w-6 h-6 sm:w-7 sm:h-7 text-[#007FCD]" />
@@ -102,12 +100,11 @@ export default function DoctorsSection() {
                       General Physician, Skin & Hair Treatment, Cosmetology
                     </p>
                   </div>
-                </dev>
+                </div>
 
                 {/* Expertise */}
-                <dev 
-                  whileHover={{ x: 6 }}
-                  className="flex gap-3 sm:gap-5 items-start p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white/80 border border-[#B3D6E7]/25 shadow-sm transition-all hover:bg-white hover:border-[#007FCD]/30 hover:shadow-md"
+                <div
+                  className="flex gap-3 sm:gap-5 items-start p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white/80 border border-[#B3D6E7]/25 shadow-sm transition-all hover:bg-white hover:border-[#007FCD]/30 hover:shadow-md hover:translate-x-1.5"
                 >
                   <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-br from-[#007FCD]/10 to-[#007FCD]/5 flex items-center justify-center shrink-0 border border-[#007FCD]/20">
                     <Award className="w-6 h-6 sm:w-7 sm:h-7 text-[#007FCD]" />
@@ -118,7 +115,7 @@ export default function DoctorsSection() {
                       Advanced skin treatments, hair restoration, and holistic wellness therapies
                     </p>
                   </div>
-                </dev>
+                </div>
               </div>
 
               {/* Biography paragraph */}
