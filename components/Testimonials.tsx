@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 import { useState } from "react";
 
@@ -36,12 +35,7 @@ export default function Testimonials() {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <dev
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <span className="text-primary font-semibold tracking-wider uppercase text-sm mb-2 block">Patient Stories</span>
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
               Hear From Our <span className="text-gradient">Clients</span>
@@ -49,16 +43,12 @@ export default function Testimonials() {
             <p className="text-text-muted text-lg">
               Don't just take our word for it. Read how we've helped thousands of patients achieve their goals.
             </p>
-          </dev>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Treatment Result Showcase */}
-          <dev
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+          <div
             className="relative w-full aspect-video rounded-3xl overflow-hidden premium-shadow group"
           >
             <img 
@@ -66,14 +56,12 @@ export default function Testimonials() {
               alt="Hair Fall Treatment Result" 
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
-          </dev>
+          </div>
 
           {/* Text Testimonials Slider (CSS based auto-scroll) */}
           <div className="relative overflow-hidden h-[400px]">
-            <dev 
+            <div 
               className="flex flex-col gap-6"
-              animate={{ y: [0, -400] }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             >
               {[...testimonials, ...testimonials].map((testimonial, idx) => (
                 <div key={`${testimonial.id}-${idx}`} className="glass p-8 rounded-3xl premium-shadow">
@@ -97,7 +85,7 @@ export default function Testimonials() {
                   </div>
                 </div>
               ))}
-            </dev>
+            </div>
             
             {/* Gradient Mask for smooth scrolling effect */}
             <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-white to-transparent z-10 pointer-events-none" />

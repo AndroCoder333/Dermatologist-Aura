@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+
 import { useEffect, useState, useRef } from "react";
 import { Award, Users, ThumbsUp, Activity } from "lucide-react";
 
@@ -74,12 +74,7 @@ export default function WhyChooseUs() {
           
           {/* Left Column: Heading (compact layout) */}
           <div className="lg:col-span-4 text-center lg:text-left">
-            <dev
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
+            <div>
               <span className="text-primary font-semibold tracking-wider uppercase text-xs mb-1 block">
                 Why Us
               </span>
@@ -90,23 +85,19 @@ export default function WhyChooseUs() {
               <p className="text-white text-xs max-w-md mx-auto lg:mx-0">
                 Medical expertise and advanced technology combined for outstanding clinical care.
               </p>
-            </dev>
+            </div>
           </div>
 
           {/* Right Column: Ultra-Compact Counters Grid */}
           <div className="lg:col-span-8">
-            <dev 
-              initial={{ opacity: 0, scale: 0.98 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+            <div 
               className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 glass-dark rounded-2xl p-3 sm:p-4 md:p-6"
             >
               <CounterItem label="Years Exp" end={15} suffix="+" icon={<Award className="w-5 h-5" />} />
               <CounterItem label="Happy Patients" end={50} suffix="k+" icon={<Users className="w-5 h-5" />} />
               <CounterItem label="Satisfaction" end={98} suffix="%" icon={<ThumbsUp className="w-5 h-5" />} />
               <CounterItem label="Advanced Tech" end={100} suffix="%" icon={<Activity className="w-5 h-5" />} />
-            </dev>
+            </div>
           </div>
 
         </div>

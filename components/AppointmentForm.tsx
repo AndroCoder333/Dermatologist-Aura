@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Send, Clock, ShieldCheck, ChevronDown } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
@@ -59,12 +58,7 @@ export default function AppointmentForm() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           {/* Form Info */}
-          <dev
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+          <div>
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
               Doctor <span className="text-gradient">Consultation</span>
             </h2>
@@ -92,16 +86,10 @@ export default function AppointmentForm() {
                 </div>
               </div>
             </div>
-          </dev>
+          </div>
 
           {/* The Form */}
-          <dev
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-white rounded-3xl p-8 lg:p-10 premium-shadow relative"
-          >
+          <div className="bg-white rounded-3xl p-8 lg:p-10 premium-shadow relative">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 gap-6">
                 <div className="relative">
@@ -126,11 +114,7 @@ export default function AppointmentForm() {
                 </label>
                 
                 {isDropdownOpen && (
-                  <dev 
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl premium-shadow border border-gray-100 overflow-hidden z-50"
-                  >
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl premium-shadow border border-gray-100 overflow-hidden z-50">
                     <ul className="max-h-60 overflow-y-auto py-2 custom-scrollbar">
                       {[
                         "Hair Loss Treatment", "PRP Therapy", "Hair Transplant", 
@@ -150,7 +134,7 @@ export default function AppointmentForm() {
                         </li>
                       ))}
                     </ul>
-                  </dev>
+                  </div>
                 )}
               </div>
 
@@ -173,7 +157,7 @@ export default function AppointmentForm() {
                 )}
               </button>
             </form>
-          </dev>
+          </div>
 
         </div>
       </div>

@@ -22,7 +22,7 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           {/* Text Content */}
-          <dev
+          <div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -57,7 +57,7 @@ export default function HeroSection() {
             {/* Trust Badges */}
             <div className="grid grid-cols-2 gap-4">
               {trustBadges.map((badge, index) => (
-                <dev
+                <div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -68,20 +68,20 @@ export default function HeroSection() {
                     {badge.icon}
                   </div>
                   <span className="text-xs sm:text-sm font-medium text-foreground">{badge.text}</span>
-                </dev>
+                </div>
               ))}
             </div>
-          </dev>
+          </div>
 
           {/* Hero Image */}
-          <dev
+          <div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative lg:h-[700px] flex items-center justify-center"
           >
             {/* Floating Elements */}
-            <dev
+            <div
               animate={{ y: [0, -20, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className="absolute top-4 right-4 sm:top-10 sm:right-10 glass p-3 sm:p-4 rounded-xl sm:rounded-2xl premium-shadow z-20"
@@ -90,9 +90,9 @@ export default function HeroSection() {
                 <Star className="w-4 h-4 sm:w-5 sm:h-5 text-accent fill-current" />
                 <div className="text-xs sm:text-sm font-bold">4.9/5 Rating</div>
               </div>
-            </dev>
+            </div>
 
-            <dev
+            <div
               animate={{ y: [0, 20, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               className="absolute bottom-6 left-4 sm:bottom-20 sm:left-0 glass p-3 sm:p-4 rounded-xl sm:rounded-2xl premium-shadow z-20"
@@ -106,7 +106,7 @@ export default function HeroSection() {
                   <div className="text-[10px] sm:text-xs text-text-muted">Procedures</div>
                 </div>
               </div>
-            </dev>
+            </div>
 
             {/* Main Image placeholder - Using a styled div as placeholder since we don't have an actual image asset */}
             <div className="relative w-full max-w-md aspect-[3/4] rounded-[2rem] overflow-hidden premium-shadow border-8 border-white">
@@ -120,7 +120,7 @@ export default function HeroSection() {
             
             {/* Background shape */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg aspect-square rounded-full bg-gradient-to-tr from-primary/10 to-secondary/10 -z-10 blur-3xl" />
-          </dev>
+          </div>
 
         </div>
       </div>

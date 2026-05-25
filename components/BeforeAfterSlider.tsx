@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { motion } from "framer-motion";
 import { MoveRight, MoveLeft } from "lucide-react";
 
 export default function BeforeAfterSlider() {
@@ -41,12 +40,7 @@ export default function BeforeAfterSlider() {
     <section id="before-after" className="py-24 bg-white relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <dev
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <span className="text-primary font-semibold tracking-wider uppercase text-sm mb-2 block">Real Results</span>
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
               Before & <span className="text-gradient">After</span>
@@ -54,15 +48,11 @@ export default function BeforeAfterSlider() {
             <p className="text-text-muted text-lg">
               See the transformative results our advanced treatments provide. Slide to compare the visible differences.
             </p>
-          </dev>
+          </div>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <dev 
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+          <div 
             className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-3xl overflow-hidden premium-shadow select-none"
             ref={containerRef}
             onMouseMove={handleMouseMove}
@@ -111,7 +101,7 @@ export default function BeforeAfterSlider() {
                 </div>
               </div>
             </div>
-          </dev>
+          </div>
           
           <div className="text-center mt-6 text-sm text-text-muted">
             <span className="inline-block md:hidden">Swipe left and right</span>

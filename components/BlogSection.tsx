@@ -32,7 +32,7 @@ export default function BlogSection() {
     <section className="py-24 bg-soft-gray">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-          <dev
+          <div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -46,7 +46,7 @@ export default function BlogSection() {
             <p className="text-text-muted text-lg">
               Stay updated with the latest trends, tips, and expert advice in dermatology and aesthetic treatments.
             </p>
-          </dev>
+          </div>
           
           <motion.a
             initial={{ opacity: 0, x: 20 }}

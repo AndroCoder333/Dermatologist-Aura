@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ArrowRight, Droplet, MoveUp, Target, Sun, Zap, Clock, Eye, Sparkles, Syringe, Activity } from "lucide-react";
 
 export default function ServicesSection() {
@@ -17,32 +16,14 @@ export default function ServicesSection() {
     { id: 10, title: "Dark Circle Treatment", icon: <Eye className="w-5 h-5 sm:w-8 sm:h-8 text-primary" />, desc: "Specialized care to eliminate under-eye bags and dark circles." },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-  };
 
   return (
     <section id="services" className="py-16 md:py-24 bg-white relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <dev
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <span className="text-primary font-semibold tracking-wider uppercase text-sm mb-2 block">Our Expertise</span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-foreground mb-4 sm:mb-6">
               Premium <span className="text-gradient">Treatments</span>
@@ -50,26 +31,20 @@ export default function ServicesSection() {
             <p className="text-text-muted text-base sm:text-lg">
               Discover our comprehensive range of advanced dermatological treatments designed to enhance your natural beauty and boost your confidence.
             </p>
-          </dev>
+          </div>
         </div>
 
-        <dev 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+        <div
           className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"
         >
           {services.map((service) => (
-            <dev
+            <div
               key={service.id}
-              variants={itemVariants}
-              whileHover={{ y: -10 }}
               onClick={() => {
                 window.dispatchEvent(new CustomEvent('selectService', { detail: service.title }));
                 document.getElementById('appointment')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="group relative bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 premium-shadow border border-gray-100 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col justify-between"
+              className="group relative bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 premium-shadow border border-gray-100 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col justify-between hover:-translate-y-2"
             >
               
               <div className="relative z-10 flex flex-col h-full justify-between">
@@ -93,9 +68,9 @@ export default function ServicesSection() {
                   Learn More <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
-            </dev>
+            </div>
           ))}
-        </dev>
+        </div>
 
       </div>
     </section>
